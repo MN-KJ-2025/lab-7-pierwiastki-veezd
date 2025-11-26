@@ -9,9 +9,9 @@
 # =============================================================================
 import numpy as np
 import numpy.polynomial.polynomial as nppoly
+from typing import Optional, Tuple
 
-
-def roots_20(coef: np.ndarray) -> tuple[np.ndarray, np.ndarray] | None:
+def roots_20(coef: np.ndarray) -> tuple[np.ndarray, np.ndarray] :#| None:
     """Funkcja wyznaczająca miejsca zerowe wielomianu funkcją
     `nppoly.polyroots()`, najpierw lekko zaburzając wejściowe współczynniki 
     wielomianu (N(0,1) * 1e-10).
@@ -28,7 +28,7 @@ def roots_20(coef: np.ndarray) -> tuple[np.ndarray, np.ndarray] | None:
     pass
 
 
-def frob_a(coef: np.ndarray) -> np.ndarray | None:
+def frob_a(coef: np.ndarray) -> np.ndarray :#| None:
     """Funkcja służąca do wyznaczenia macierzy Frobeniusa na podstawie
     współczynników jej wielomianu charakterystycznego:
     w(x) = a_n*x^n + a_{n-1}*x^{n-1} + ... + a_2*x^2 + a_1*x + a_0
@@ -48,10 +48,10 @@ def frob_a(coef: np.ndarray) -> np.ndarray | None:
         (np.ndarray): Macierz Frobeniusa o rozmiarze (n,n).
         Jeżeli dane wejściowe są niepoprawne funkcja zwraca `None`.
     """
-    pass
+    
 
 
-def is_nonsingular(A: np.ndarray) -> bool | None:
+def is_nonsingular(A: np.ndarray) -> bool : #| None:
     """Funkcja sprawdzająca czy podana macierz NIE JEST singularna. Przy
     implementacji należy pamiętać o definicji zera maszynowego.
 
